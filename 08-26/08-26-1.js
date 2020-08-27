@@ -1,3 +1,18 @@
+'use strict'
+
+
+// description
+// 找出数组中重复的数字。
+
+// 在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。
+
+// 示例 1：
+
+// 输入：
+// [2, 3, 1, 0, 2, 5, 3]
+// 输出：2 或 3 
+
+
 
 // my solution
 
@@ -19,6 +34,8 @@ const myFindRepeatNumber = function (nums) {
     return temp[Math.floor(Math.random() * temp.length)]
 };
 
+// answer one
+
 // 解法 1: 使用哈希表
 // 哈希表的结构是：number-boolean，number 就是数组中的数字，boolean 代表数字是否出现过。
 // 整体的流程是：遍历数组中的数字，检查是否出现过，如果出现过，那么返回此数字。代码实现如下
@@ -37,6 +54,8 @@ const findRepeatNumber1 = function (nums) {
         }
     }
 };
+
+// answer two
 
 // 解法 2: 原地哈希（推荐）
 // 从题目描述可以知道，所有数字都在 0 ～ n-1 的范围内。因此不需要额外开辟空间，每次遍历时，检查当前元素是否放在了正确位置上（例如元素 i 应该放在下标为 i 的位置上）。
@@ -65,6 +84,8 @@ const findRepeatNumber2 = function (nums) {
         }
     }
 };
+
+// answer three
 
 
 const arr = [1, 2, 2, 3, 3, 4, 5, 6, 7, 7]

@@ -1,8 +1,8 @@
 
+'use strict'
 
-// my solution
-// no
-// 链表 js原生没有的概念
+
+// description
 
 /**
  * Definition for singly-linked list.
@@ -12,6 +12,18 @@
  * }
  */
 
+// 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
+
+// 示例 1：
+
+// 输入：head = [1,3,2]
+// 输出：[2,3,1]
+
+// my solution
+
+// no
+
+// answer one
 
 /**
  * @param {ListNode} head
@@ -26,6 +38,9 @@ const reversePrint = function (head) {
     return res
 };
 
+// answer two
+
+
 const reverseLink = (head) => {
     if (head === null || head.next === null) return head
     const p = reverseLink(head.next)
@@ -33,6 +48,10 @@ const reverseLink = (head) => {
     head.next = null
     return p // 返回真正的表头
 }
+
+
+// answer three
+
 
 
 console.log(reversePrint([1, 3, 2]));
