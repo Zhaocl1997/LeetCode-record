@@ -65,14 +65,14 @@ const myBuildTree = (preorder, inorder) => {
 // answer one
 
 const buildTree = (preorder, inorder) => {
-    if (!preorder.length) return null;
-    const top = preorder.shift(); // 修改原数组同时获取top节点
-    const root = new TreeNode(top);
-    const topIndex = inorder.indexOf(top);
-    root.left = buildTree(preorder.slice(0, topIndex), inorder.slice(0, topIndex));
-    root.right = buildTree(preorder.slice(topIndex), inorder.slice(topIndex + 1));
-    return root;
-};
+    if (!preorder.length) return null
+    const top = preorder.shift()
+    const root = new TreeNode(top)
+    const topIndex = inorder.indexOf(top)
+    root.left = buildTree(preorder.slice(0, topIndex), inorder.slice(0, topIndex))
+    root.right = buildTree(preorder.slice(topIndex), inorder.slice(topIndex + 1))
+    return root
+}
 
 
 
